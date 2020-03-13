@@ -12,11 +12,19 @@ public class UserTest {
 
     @Test
     void gettingSameUSerNameAfterSerialization() throws JsonProcessingException {
-        User userOne = new User("avani", "101");
+        User userOne = new User("avani", "avani@123");
         ObjectMapper objectMapper = new ObjectMapper();
         String exceptedString = objectMapper.writeValueAsString(userOne);
         Assertions.assertTrue(exceptedString.contains("\"userName\":\"avani\""));
 
-
     }
+
+    @Test
+    void gettingSamePasswordAfterSerialization() throws JsonProcessingException {
+        User userOne = new User("dyane", "dyane@123");
+        ObjectMapper objectMapper = new ObjectMapper();
+        String exceptedString = objectMapper.writeValueAsString(userOne);
+        Assertions.assertTrue(exceptedString.contains("\"password\":\"dyane@123\""));
+    }
+
 }

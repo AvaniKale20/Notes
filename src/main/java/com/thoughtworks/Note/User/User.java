@@ -3,12 +3,12 @@ package com.thoughtworks.Note.User;
 public class User {
 
     private String userName;
-    private String id;
+    private String password;
 
 
-    public User(String userName, String id) {
+    public User(String userName, String password) {
         this.userName = userName;
-        this.id = id;
+        this.password = password;
     }
 
     public String getUserName() {
@@ -19,11 +19,11 @@ public class User {
         this.userName = userName;
     }
 
-    public String getId() {
-        return id;
+    public String getPassword() {
+        return password;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
